@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Real Claude Code session logs: never commit. Synthetic test fixtures only.
+*.jsonl
+!tests/fixtures/*.jsonl
