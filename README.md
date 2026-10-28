@@ -25,4 +25,4 @@ Analyzes Claude Code session logs to:
 
 - v1: Python, uv, Pydantic, pytest, GitHub Actions CI, ruff
 - v2: SQLite/SQL, Anthropic SDK, pandas
-- v3: FastAPI, Streamlit, Docker + Compose, AWS Deployment, skikit-learn
+- v3: FastAPI, Streamlit, Docker + Compose, AWS Deployment, scikit-learn
