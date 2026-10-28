@@ -5,6 +5,8 @@ Analyzes Claude Code session logs to:
 - Detect wasteful agent patterns
 - Recommend more efficient workflows
 
+## **Status:** Early Development. ⚠️ v1 in progress. ⚠️
+
 ## v1 scope
 
 1. **Read** a Claude Code session log (JSONL).
