@@ -8,7 +8,7 @@ Windows 11 + PowerShell. Give PowerShell-compatible commands; don't assume bash.
 - Propose a plan and wait for my approval before writing code. Exception: trivial fixes (typos, lint, renames) — just do them and tell me what changed.
 - One small, focused change at a time. Keep diffs easy to review.
 - Briefly explain non-obvious code and Python idioms.
-- Basic concepts: check `docs/concepts.md` before explaining one. If it's listed, don't re-explain it. After explaining a new one, add a one-line entry.
+- Basic concepts: check `notes/learning-notes.md` before explaining one. If it's listed, don't re-explain it. After explaining a new one, add a one-line entry.
 - Ask when requirements are unclear instead of guessing.
 - Never commit or push. I review and commit myself.
 - Don't add dependencies without asking.
