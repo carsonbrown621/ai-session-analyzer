@@ -21,6 +21,18 @@ Analyzes Claude Code session logs to:
 - [ ] **v3: Evaluation and comparison.** Compare two sessions solving the same task;
       evaluate whether the coach's recommendations are accurate; recommend when to delegate work to subagents.
 
+## Development
+
+Requires [uv](https://docs.astral.sh/uv/). uv installs the pinned Python version automatically.
+
+```powershell
+uv sync                          # install dependencies into .venv
+uv run session-analyzer --help   # run the CLI
+uv run pytest                    # run tests
+uv run ruff check .              # lint
+uv run ruff format .             # format
+```
+
 ## Planned Tech Stack
 
 - v1: Python, uv, Pydantic, pytest, GitHub Actions CI, ruff
