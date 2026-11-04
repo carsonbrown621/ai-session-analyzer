@@ -1,0 +1,32 @@
+[project]
+name = "session-analyzer"
+version = "0.1.0"
+description = "Analyze Claude Code session logs for token usage and wasteful agent patterns."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Carson Brown" }]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+session-analyzer = "session_analyzer.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]
