@@ -1,5 +1,7 @@
 # Claude Code Session Analyzer
 
+![CI](https://github.com/carsonbrown621/ai-session-analyzer/actions/workflows/ci.yml/badge.svg)
+
 Analyzes Claude Code session logs to:
 - Measure token usage
 - Detect wasteful agent patterns

@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false # let 3.14 finish even if 3.12 fails
+      matrix:
+        python-version: ["3.12", "3.14"]
+    steps:
+      - uses: actions/checkout@v5
+      # Official uv action; caches downloaded packages between runs.
+      - uses: astral-sh/setup-uv@v7
+        with:
+          # Sets UV_PYTHON, overriding .python-version for this matrix entry.
+          python-version: ${{ matrix.python-version }}
+          enable-cache: true
+      # --locked fails if uv.lock is out of date with pyproject.toml.
+      - run: uv sync --locked
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run pytest
